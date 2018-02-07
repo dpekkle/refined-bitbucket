@@ -15,7 +15,7 @@ import loadAllDiffs from './load-all-diffs';
 import occurrencesHighlighter from './occurrences-highlighter';
 import insertPullrequestTemplate from './pullrequest-template';
 import addSidebarCounters from './sidebar-counters';
-import addSourceBranch from './source-branch';
+import augmentPrEnrty from './source-branch';
 import syntaxHighlight from './syntax-highlight';
 
 import waitForPullRequestContents from './wait-for-pullrequest';
@@ -85,7 +85,7 @@ function pullrequestListRelatedFeatures(config) {
 
         if (config.addSourceBranchToPrList) {
             linkifyTargetBranch(this);
-            addSourceBranch(this);
+            augmentPrEnrty(this);
         }
     });
 }
